@@ -5,8 +5,6 @@
 From histograms to ARD data. One time point only, multiple observations
 -> Apply add/sum of duplicates per window, i.e. merge all observations per window per parcel into one. Window is 12-days COH.
 
-We give up using median info from here on. TODO: fusion of median.
-
 python 03-histo2ARD-InSAR.py -i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/InSAR -y 2023 -m -l l1
 
 Note: if for some reason there are data from class 4 AND from class 41 and 42 -> duplicates.
