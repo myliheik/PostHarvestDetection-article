@@ -20,7 +20,7 @@ python 03-histo2ARD-S1.py -i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/S
 WHERE:
 
 -m combine histograms
--n combineAnnual2D (intra-annual, all)
+#-n combineAnnual2D (intra-annual, all)
 -s combineAnnual2D (intra or inter-annual, by dates)
 -l normalization, default None
 
