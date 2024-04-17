@@ -9,38 +9,12 @@ env: @myGIS2022
 
 Usage:
 
-# in situ:
-
-python3.10 01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
---fullshapefile /Users/myliheik/Documents/myVEGCOVER/mappingvegcover/shpfiles/extendedReferences2020-AOI-sampled-buffered_AOI.shp --outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/shpPerTile --out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2020.tsv
-
-
-python3.10 01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
---fullshapefile /Users/myliheik/Documents/myVEGCOVER/mappingvegcover/shpfiles/extendedReferences2021-AOI-sampled-buffered_AOI.shp --outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/shpPerTile --out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2021.tsv
-
-python3.10 01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
---fullshapefile /Users/myliheik/Documents/myVEGCOVER/mappingvegcover/shpfiles/extendedReferences2022-AOI-sampled-buffered_AOI.shp --outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/shpPerTile --out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2022.tsv
-
-
-# big refe
-
-
-python 01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
---fullshapefile /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/temp/AOI2020-0ha/kaikkiAOI1234.shp \
---outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/bigRefe2020/shpPerTile --out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2020BigRefe.tsv
-
-python 01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
---fullshapefile /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/temp/AOI2021-0ha/kaikkiAOI1234.shp \
---outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/bigRefe2021/shpPerTile --out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2021BigRefe.tsv
-
-python 01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
---fullshapefile /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/temp/AOI2022-0ha/kaikkiAOI1234.shp \
---outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/bigRefe2022/shpPerTile --out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2022BigRefe.tsv
+python3.10 ../python/01-splitshp-shadow-S2.py --s2tiles /Users/myliheik/Documents/GISdata/sentinel2-tiles/sentinel2_tiles-over-Finland/suomiTiles.shp \
+--fullshapefile /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/extendedReferences2023-AOI-sampled-buffered.shp \
+--outshpdir /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu2023/shpPerTile \
+--out_file /Users/myliheik/Documents/myVEGCOVER/vegcover2023/logs/parcelIDtile2023insitu.tsv
 
 ****
-
-Note: this help if GDAL fails: 
-export GDAL_DATA=/Users/myliheik/anaconda3/envs/myGIS/share/gdal
 
 Modified version of Samantha's splitshp.py
 
@@ -64,7 +38,7 @@ def main(args):
         if not args.fullshapefile or not args.s2tiles:
             raise Exception('Missing shapefile argument. Try --help .')
 
-        print(f'\n\nsplitshp-shadow.py')
+        print(f'\n\n01-splitshp-shadow.py')
         print(f'\nSentinel2 tiles: {args.s2tiles}')
         print(f'ESRI shapefile parcels: {args.fullshapefile}')
         out_dir_path = pathlib.Path(os.path.expanduser(args.outshpdir))
