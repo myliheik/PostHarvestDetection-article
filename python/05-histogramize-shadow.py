@@ -11,7 +11,16 @@ input array csvs from main program, each line representing one field, first numb
 output similar csv with each line representing one field, first number being ID of field, followed by x = bins numbers representing histogram values
 
 
-RUN: python histogramize-shadow.py -i input -o output -b B8A -n nrbins -l 2 -h 2000
+RUN: 
+
+# For all bands (-b) separately:
+python histogramize-shadow.py -i input -o output -b B8A -n nrbins -l 2 -h 2000
+
+Use ../bin/05-histogramize-S2.sh to generate 10 commands (for each bands).
+
+You need to have configuration files (information on band ranges) at ../bin/confs/
+
+
 """
 ######################
 
