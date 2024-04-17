@@ -12,10 +12,12 @@ From Sentinel-1 mosaics to full array data with rasterstats. Features 'VV', 'VH'
 
 
 INPUTS:
-year
-date
-outputdir
-shppolku
+i: input shapefile of parcels
+y: year
+o: outputdir
+d: start date
+
+binsize is fixed to 32.
 
 OUTPUT:
 
