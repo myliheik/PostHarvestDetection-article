@@ -21,9 +21,9 @@ OUTPUT:
 
 RUN:
 
-python ../python/01-extractPolygonsFromS1.py -y 2020 --startdate 0411 \
-     --shppolku /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/extendedReferences2020-AOI-sampled-buffered.shp \
-    -o /Users/myliheik/Documents/myVEGCOVER/vegcover2023/S1/results-insitu2020/ \
+python ../python/01-extractPolygonsFromS1.py -y 2023 --startdate 0411 \
+     --shppolku /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/extendedReferences2023-AOI-sampled-buffered.shp \
+    -o /Users/myliheik/Documents/myVEGCOVER/vegcover2023/S1/results-insitu/ \
     --extractIntensities --savePopulations --plotPopulations
     
     
