@@ -376,7 +376,7 @@ def readImages(year: str, enddate: str, date: str, parcelpath: str, aoi_shapefil
                         else:
                             print(x['properties']['target'])
                             print('Target value did not match any of these: 0, 1, 2, 3, 4, 41, 5')
-                            kaput
+                            
 
 
                 feature = 'COH12VH'
