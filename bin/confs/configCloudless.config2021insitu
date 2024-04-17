@@ -1,0 +1,9 @@
+startdate=20210401
+enddate=20210421
+datapath=/scratch/project_2002224/Sentinel2L2A
+projectpath=/scratch/project_2002224/vegcover2023/cloudless/results-insitu2021
+shppath=/projappl/project_2002224/vegcover2023/shpfiles/insitu/shpPerTile/2021
+idname=parcelID
+puhtiproject=project_2002224
+safepath=/projappl/project_2002224/vegcover2023/bin/safepaths.txt2021
+histopath=/scratch/project_2002224/vegcover2023/cloudless/histo-insitu2021
