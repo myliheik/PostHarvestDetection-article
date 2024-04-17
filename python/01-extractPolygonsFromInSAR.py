@@ -24,8 +24,8 @@ OUTPUT:
 RUN:
 
 python ../python/01-extractPolygonsFromInSAR.py -y 2023 --startdate 0408 \
-     --shppolku /Users/myliheik/Documents/myVEGCOVER/vegcover2023/shpfiles/insitu/extendedReferences2020-AOI-sampled-buffered.shp \
-    -o /Users/myliheik/Documents/myVEGCOVER/vegcover2023/InSAR/ \
+     --shppolku /projappl/project_2002224/vegcover2023/shpfiles/insitu/extendedReferences2023-AOI-sampled-buffered.shp \
+    -o /scratch/project_2002224/vegcover2023/InSAR/ \
     --extractIntensities --savePopulations --plotPopulations
     
     
