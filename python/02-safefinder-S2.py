@@ -1,13 +1,13 @@
 """
 MY 2022-10-12
 
-safefinder creates paths to all files between start- and enddate 
+safefinder creates paths to all Sentinel-2 SAFE dirs between start- and enddate 
 
 17.8.2021 MY modified from pathfinder.py to find safe dirs
 5.1.2023 MY modified: only if filename *.SAFE continue (other files are not interrupting no more)
 
 RUN:
-python safefinder.py -s 20200501 -e 20200905  -d /scratch/project_2002694/safedirs-April
+python 02-safefinder.py -s 20200501 -e 20200905  -d /scratch/project_2002694/safedirs-April
 
 """
 import os
