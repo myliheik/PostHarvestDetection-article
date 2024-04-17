@@ -29,8 +29,8 @@ WHERE:
 -r: for multi-band operation you must specify a common target resolution (e.g. 10)
 -t: temporary directory path
 
-Generate commands with puhti_generate_commandlist.sh:
-sh ../bin/puhti_generate_commandlist.sh
+Generate commands with 03-arrayextractor-S2.sh:
+sh ../bin/03-arrayextractor-S2.sh
 
 Run as array job in Puhti:
 
