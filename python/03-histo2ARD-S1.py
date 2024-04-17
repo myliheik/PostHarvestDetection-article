@@ -8,9 +8,6 @@ First:
 # make ARD per date, all years by default:
 python 03-histo2ARD-S1.py -i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/S1/results-insitu -m -l l1
 
-# Then this or straigh away this, combine intra-annual time series:
-python 03-histo2ARD-S1.py -i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/S1/results-insitu -y 2022 -n -l l1
-
 # Finally this combines years, give exact dates: (singleObservations)
 python 03-histo2ARD-S1.py -i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/S1/results-insitu -d 20200411 20210411 20220421 -s -l l1
 
