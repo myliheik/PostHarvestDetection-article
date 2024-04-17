@@ -17,7 +17,6 @@ y: year
 o: outputdir
 d: start date
 
-binsize is fixed to 32.
 
 OUTPUT:
 
