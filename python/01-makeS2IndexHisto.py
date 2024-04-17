@@ -12,10 +12,12 @@ From Sentinel-2 mosaics to analysis ready data with rasterstats. Indices 'NDBI',
 @PUHTI
 
 INPUTS:
-year
-outputdir
+i: input shapefile of parcels
+y: year
+o: outputdir
+d: start date
 
-binsize is fixed to 16.
+binsize is fixed to 32.
 
 OUTPUT:
 annual range files + plots of distributions
@@ -27,38 +29,26 @@ histograms per parcel, .pkl
 	- ja kuvia 
 - kaiken tämän jälkeen aja vivulla --make_histograms, joka tekee histogrammit per par (histograms.pkl)
 
-# 'selvittamattomat'ja 'selvittamattomatAidot' pitää tehdä erikseen, näissä ei ole split-muuttujaa
-
 Next, run makeARD.py (2D or 3D).
 
 RUN @PUHTI:
 
-python 01-makeS2IndexHisto.py -y 2019 -d 0401 \
-    -i /scratch/project_2002224/vegcover2023/shpfiles/bigRefe2019/kaikkiAOI1234.shp \
-    -o /scratch/project_2002224/vegcover2023/S2indices/bigRefe \
+for vuosi in 2020 2021 2022 2023; do
+
+ srun python /projappl/project_2002224/vegcover2023/python/01-makeS2IndexHisto.py -y $vuosi -d 0401\
+    -i /projappl/project_2002224/vegcover2023/shpfiles/insitu/extendedReferences$vuosi-AOI-sampled-buffered.shp \
+    -o /scratch/project_2002224/vegcover2023/S2indices/results-insitu \
     --extractIntensities
-    
-python 01-makeS2IndexHisto.py -y 2019 -d 0401\
-    -o /scratch/project_2002224/vegcover2023/S2indices/bigRefe \
+
+ srun python /projappl/project_2002224/vegcover2023/python/01-makeS2IndexHisto.py -y $vuosi -d 0401\
+    -o /scratch/project_2002224/vegcover2023/S2indices/results-insitu \
     --plotPopulations
-    
-python 01-makeS2IndexHisto.py -y 2019 -d 0401\
-    -o /scratch/project_2002224/vegcover2023/S2indices/bigRefe \
-    --make_histograms    
-    
-# Optionally for features separately
-python 01-makeS2IndexHisto.py -y 2019 -d 0401 -f NDVI \
-    -o /scratch/project_2002224/vegcover2023/S2indices/bigRefe \
-    --extractIntensities
 
-# Only to draw population histograms per feature: 
-python 01-makeS2IndexHisto.py -y 2019 -d 0401 -f NDVI \
-    -o /scratch/project_2002224/vegcover2023/S2indices/bigRefe -n
-    
-# If all features (as default), plots all in one figure:
-python 01-makeS2IndexHisto.py -y 2019 -d 0401 \
-    -o /scratch/project_2002224/vegcover2023/S2indices/bigRefe -n
+ srun python /projappl/project_2002224/vegcover2023/python/01-makeS2IndexHisto.py -y $vuosi -d 0401\
+    -o /scratch/project_2002224/vegcover2023/S2indices/results-insitu \
+    --make_histograms
 
+    done
 
 """
 import argparse
