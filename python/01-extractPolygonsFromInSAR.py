@@ -14,10 +14,11 @@ From 12-days InSAR to full array data with rasterstats. Feature 'COH12'
 
 
 INPUTS:
-year
-date
-outputdir
-shppolku
+i: input shapefile of parcels
+y: year
+o: outputdir
+d: start date
+
 
 OUTPUT:
 
