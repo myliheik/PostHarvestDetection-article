@@ -25,12 +25,6 @@ TIME SERIES, TCN:
 
 python ../python/26-experiment4.py \
 -o /Users/myliheik/Documents/myVEGCOVER/vegcover2023/sensitivityAnalysis/experiment4 \
--i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/cloudless/dataStack-insitu/ard-S1-S2-3D_2020-2021-2022-2023.npz \
--n /Users/myliheik/Documents/myVEGCOVER/vegcover2023/InSAR/20230408/ard2023InSAR.pkl \
--c 12340
-
-python ../python/26-experiment4.py \
--o /Users/myliheik/Documents/myVEGCOVER/vegcover2023/sensitivityAnalysis/experiment4 \
 -i /Users/myliheik/Documents/myVEGCOVER/vegcover2023/sensitivityAnalysis/experiment4/ard-S1-S2-3D_2020-2021-2022-2023.npz \
 -n /Users/myliheik/Documents/myVEGCOVER/vegcover2023/sensitivityAnalysis/experiment4/ard2023InSAR.pkl \
 -c 12340

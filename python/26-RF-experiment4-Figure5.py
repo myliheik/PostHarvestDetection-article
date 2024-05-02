@@ -60,8 +60,8 @@ df4 = df3.groupby('features').sum().sort_values('importance', ascending = False)
 dictFeatures = {'B02': 'B02 Blue', 'B03': 'B03 Green', 'B04': 'B04 Red', 'B05': 'B05 Vegetation\nred edge', 'B06': 'B06 Vegetation\nred edge', 'B07': 'B07 Vegetation\nred edge', 
         'B8A': 'B8A Narrow NIR', 'B08': 'B08 NIR', 'B11': 'B11 SWIR', 'B12': 'B12 SWIR', 'VV': 'VV', 'VH': 'VH', 'COH12VV': 'COH12VV', 'COH12VH': 'COH12VH'}
 
-dictSpectralArea = {'B02': 'VIS', 'B03': 'VIS', 'B04': 'VIS', 'B05': 'VNIR', 'B06': 'VNIR', 'B07': 'VNIR', 
-        'B8A': 'VNIR', 'B08': 'VNIR', 'B11': 'SWIR', 'B12': 'SWIR', 'VV': 'SAR', 'VH': 'SAR', 'COH12VV': 'InSAR', 'COH12VH': 'InSAR'}
+dictSpectralArea = {'B02': 'VIS', 'B03': 'VIS', 'B04': 'VIS', 'B05': 'RENIR', 'B06': 'RENIR', 'B07': 'RENIR', 
+        'B8A': 'RENIR', 'B08': 'RENIR', 'B11': 'SWIR', 'B12': 'SWIR', 'VV': 'SAR', 'VH': 'SAR', 'COH12VV': 'InSAR', 'COH12VH': 'InSAR'}
 
 
 df4['Features'] = df4['features'].map(dictFeatures)

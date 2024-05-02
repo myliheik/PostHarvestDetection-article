@@ -21,7 +21,7 @@ python 26-RF-experiment4.py \
 
 
 # Article:
-1240: 0 vs. 1 vs. green vs. 41
+12340: 0 vs. 1 vs. 2 vs. 3 vs. 41
 
 # IFS:
 1230: 1) Winter crop, 2) Grass and Stubble with companion crop, 3) Stubble and Conservation tillage, 4) Ploughing
@@ -433,6 +433,11 @@ def main(args):
         xtrain0, ytrain0, xtest0, ytest0 = munchS1S2toInSAR(df0, metatMeta, dfInSAR)
         # Munch classes:
         xtrain, ytrain, xtest, ytest = munchClasses(xtrain0, ytrain0, xtest0, ytest0, args.classes)
+        
+        print(f'Data in train set: {len(ytrain)}')
+        print(f'Data in test set: {len(ytest)}')    
+        print(f'Class distribution in train set:\n {np.unique(ytrain, return_counts=True)}')
+        print(f'Class distribution in test set:\n {np.unique(ytest, return_counts=True)}')   
         
         
         runRF(xtrain, ytrain, xtest, ytest, out_dir_path, args.classes, insarfeatures, tunniste, fpS1S2)        
